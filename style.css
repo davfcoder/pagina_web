@@ -1,0 +1,105 @@
+/* Estilos generales para el cuerpo de la página*/
+body {
+    font-family: "Arial", serif;
+    margin: 0; /* Elimina los márgenes*/
+    text-align: center;
+  	background-image: url('https://images.freeimages.com/images/large-previews/ef7/school-yard-1617337.jpg'); /* Imagen de fondo */
+    background-size: cover; /* Ajusta la imagen para cubrir toda la pantalla */
+   	position: relative; /* Necesario para ::before */
+}
+
+/*Capa semitransparente sobre la imagen de fondo*/
+body::before {
+    content: ""; /* Elemento vacío para aplicar el efecto */
+    position: fixed; /* Se fija en la ventana del navegador */
+    top: 0;  /* Alinea la capa en la parte superior */
+    left: 0;
+    width: 100%;/* Cubre todo el ancho */
+    height: 100%; /* Cubre todo el alto */
+    background-color: rgba(255, 255, 255, 0.8); /* Capa blanca semitransparente */
+    z-index: -1; /* Se coloca detrás del contenido */
+}
+
+/* Estilos del encabezado */
+header {
+    background-color: #1d4e80;
+    color: white;
+    display: flex; /* Se usa flexbox para organizar los elementos de forma flexible*/
+    align-items: center;
+    padding: 10px 30px;/* Espaciado interno*/
+}
+
+header img {
+    height: 70px; /* Define la altura del logo */
+    margin-right: 50px;
+}
+/* Estilos para el navbar */
+nav {
+    display: flex;
+    justify-content: space-between; /* Distribuye los elementos uniformemente */
+    width: 100%; /* Asegura que el navbar ocupe todo el ancho del contenedor */
+}
+/* Estilos para el navbar */
+nav a {
+    color: white;
+    font-size: 20px; /*Tamaño de la fuente*/
+    text-decoration: none; /* Elimina el subrayado de los enlaces */
+}
+
+/*Estilo tabla de información del estudiante*/
+#info-estudiante th, #info-estudiante td {
+    padding: 4px; /* Agrega espacio interno en las celdas */
+    text-align: left;
+    width: 50%; /* Hace que las columnas sean proporcionales */
+}
+/* Estilos para la segunda columna de información del estudiante*/
+#info-estudiante th {
+    background-color: #ebeced; /* Color de fondo similar a la primera columna */
+}
+
+/* Estilos de la tabla de notas */
+#notas {
+    width: 60%; /* Define el ancho de la tabla */
+    border-collapse: collapse; /* Fusiona los bordes de la tabla */
+    margin: 0 auto; /* Centra la tabla en la página */
+    margin-bottom: 50px; /* Agrega espacio en la parte inferior */
+}
+
+/*Encabezados de la tabla de notas*/
+#notas th {
+    background-color: #ebeced;
+}
+/*Estilos de las celdas de datos en la tabla de notas*/
+#notas td {
+    padding: 1px; /* Agrega espacio interno en las celdas */
+    text-align: center;
+}
+
+/* Estilos de las notas según su valor */
+.notabaja {
+    color: red; /* Si la nota es menor o igual a 6, se muestra en rojo */
+}
+
+.notaalta {
+    color: blue; /* Si la nota es mayor o igual a 9.5, se muestra en azul */
+}
+
+
+/* Estilos del pie de página */
+footer {
+    background-color: #555555;
+    color: #44444;
+    position: fixed;	/* Se coloca en una posición relativa */
+    bottom: 0; /* Alinea el pie de página en la parte inferior */
+    padding: 20px 0;/* Espaciado interno superior e inferior */
+    text-align: center;
+  	font-size: 13px; /* Reduce el tamaño de la fuente */
+    width: 100%; /* Ocupa todo el ancho de la pantalla */
+display: flex; /* Usa flexbox para dividir en columnas */
+   justify-content: space-around; /* Distribuye los elementos uniformemente */
+footer p1 {
+    position: absolute; /* Se coloca en una posición absoluta */
+    bottom: 4px; /* Alinea el texto en la parte inferior */
+    left: 20px; /* Alinea el texto a la derecha */
+    font-size: 11px; /* Ajusta el tamaño de la fuente si es necesario */
+}
